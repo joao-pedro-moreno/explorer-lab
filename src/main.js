@@ -68,10 +68,54 @@ const cardNumberPattern = {
         const foundMask = dynamicMasked.compiledMasks.find(function (item) {
             return number.match(item.regex)
         })
-
-        console.log(foundMask)
+        
+        setCardType(foundMask.cardtype)
         return foundMask
     }
 }
 
 const cardNumberMasked = IMask(cardNumber, cardNumberPattern)
+
+console.log(cardNumberMasked)
+
+cardNumber.addEventListener("keyup", function () {
+    const ccNumber = document.querySelector(".cc-number")
+
+    if (cardNumber.value.length < 1) {
+        ccNumber.innerHTML = "0000 0000 0000 0000"
+    } else {
+        ccNumber.innerHTML = cardNumber.value
+    }
+})
+
+const cardHolder = document.querySelector("#card-holder")
+
+cardHolder.addEventListener("keyup", function () {
+    const ccHolder = document.querySelector(".cc-holder .value")
+
+    if (cardHolder.value.length < 1) {
+        ccHolder.innerHTML = "Nome do titular"
+    } else {
+        ccHolder.innerHTML = cardHolder.value.toUpperCase()
+    }
+})
+
+expirationDate.addEventListener("keyup", function () {
+    const ccExpiration = document.querySelector(".cc-expiration .value")
+
+    if (expirationDate.value.length < 1) {
+        ccExpiration.innerHTML = "02/32"
+    } else {
+        ccExpiration.innerHTML = expirationDate.value
+    }
+})
+
+securityCode.addEventListener("keyup", function () {
+    const ccSecurityCode = document.querySelector(".cc-security .value")
+
+    if (securityCode.value.length < 1) {
+        ccSecurityCode.innerHTML = "123"
+    } else {
+        ccSecurityCode.innerHTML = securityCode.value
+    }
+})
