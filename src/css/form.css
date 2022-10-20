@@ -30,6 +30,11 @@ form input {
 
   color: white;
   text-transform: uppercase;
+  outline: none;
+}
+
+form input:focus {
+  border: 1px solid #42d3ff;
 }
 
 form .flex {
