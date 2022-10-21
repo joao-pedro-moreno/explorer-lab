@@ -33,7 +33,9 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ## 💻 Projeto
 
-O Rocketpay é um componente que simula o formulário de preenchimento de cartão de crédito, onde é possível adicionar máscara aos inputs e atualizar elementos HTML via DOM.
+O Rocketpay é um componente que simula o formulário de preenchimento de cartão de crédito, onde é possível adicionar máscara aos inputs e atualizar elementos HTML via DOM. Ele identifica a bandeira do cartão pelo seu número, quatro bandeiras estão disponíveis, sendo elas, Visa, Mastercard, Elo e Discover.
+
+<a href="https://explorer-lab-rocketpay-nine.vercel.app">Projeto online</a>
 
 ## 🔖 Layout
 
